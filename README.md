@@ -11,6 +11,7 @@
 if (i == 100) {
   NSLog(@"123");
   self.button = nil;
+  UIButton *btn = [UIButton new];
 }
 
 
