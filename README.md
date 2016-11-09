@@ -14,9 +14,10 @@ if (i == 100) {
 }
 
 - (void)test:(UIButton *)button {
-  if (!self.button) {
-      self.button = button;
-  }
+    if (!self.button) {
+        self.button = button;
+        [self test:button];
+    }
 }
 
 ```
