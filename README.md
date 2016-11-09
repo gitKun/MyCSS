@@ -13,6 +13,12 @@ if (i == 100) {
   UIButton *btn = [UIButton new];
 }
 
+- (void)test:(UIButton *)button {
+  if (!self.button) {
+      self.button = button;
+  }
+}
+
 ```
 
 ```objc
