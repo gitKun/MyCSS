@@ -14,3 +14,16 @@ if (i == 100) {
 }
 
 ```
+
+```objc
+- (void)jx_insertionSortUsingComparator:(JXSortComparator)comparator didExchange:(JXSortExchangeCallback)exchangeCallback {
+    if (self.count == 0) {
+        return;
+    }
+    for (NSInteger i = 1; i < self.count; i ++) {
+        for (NSInteger j = i; j > 0 && comparator(self[j], self[j - 1]) == NSOrderedAscending; j --) {
+            [self jx_exchangeWithIndexA:j indexB:j - 1 didExchange:exchangeCallback];
+        }
+    }
+}
+```
